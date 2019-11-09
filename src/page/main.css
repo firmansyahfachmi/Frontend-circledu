@@ -8,7 +8,7 @@
 
 .terms {
   background-color: whitesmoke;
-  height: 70px;
+  min-height: 70px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -90,7 +90,7 @@
 .card {
   border: 1px solid grey;
   background-color: transparent;
-  height: 200px;
+  min-height: 200px;
   padding: 15px;
   border-radius: 0px;
 }
@@ -151,4 +151,87 @@
 .email {
   border-radius: 0px;
   height: 30px;
+}
+
+@media screen and (max-width: 1000px) {
+  .midBody {
+    height: auto;
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 25px;
+  }
+
+  .d1 {
+    font-size: 1.3em;
+    font-weight: 400;
+  }
+
+  .d2 {
+    font-size: 1.3em;
+    font-weight: 700;
+  }
+
+  .d3 {
+    font-size: 1.1em;
+  }
+
+  .slide {
+    color: white;
+    background-color: rgba(4, 115, 219, 0.9);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 0px 0px 20px 20px;
+    min-height: 150px;
+  }
+
+  .forme {
+    display: block;
+  }
+
+  .btnCount {
+    font-size: 1em;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .sTitle {
+    font-size: 1.3em;
+    font-weight: 600;
+    margin-right: 20px;
+  }
+
+  .sDesc {
+    font-size: 0.9em;
+    margin-right: 20px;
+    margin-top: 5px;
+  }
+
+  .butContact {
+    width: 60%;
+    font-size: 0.9em;
+  }
+
+  .cookie {
+    text-align: left;
+    font-size: 0.7em;
+    font-weight: 500;
+  }
+
+  .terms {
+    display: block;
+    padding-top: 15px;
+  }
+
+  .btnGot {
+    font-size: 0.8em;
+    margin: 10px 0px 15px 15px;
+  }
+
+  .landing {
+    background-position-y: 0px;
+    background-position-x: -200px;
+  }
 }

@@ -8,7 +8,8 @@ class MainScreen extends Component {
   constructor() {
     super();
     this.state = {
-      cookies: true
+      cookies: true,
+      slide: true
     };
   }
 
@@ -24,7 +25,7 @@ class MainScreen extends Component {
               <a href="">Terms of Service</a>.
             </div>
             <button
-              className="btn btn-primary"
+              className="btn btn-primary btnGot"
               onClick={() => this.setState({ cookies: false })}
             >
               Got it
@@ -142,28 +143,36 @@ class MainScreen extends Component {
         <div className="col-lg-12 footer">
           <div>Mohammad Fachmi Firmansyah &copy; All Right Reserved</div>
         </div>
-        <div className="slide">
-          <div className="col-lg-12" style={{ textAlign: "right" }}>
-            <button className="ml-auto btn" style={{ color: "white" }}>
-              x
-            </button>
-          </div>
+        {this.state.slide === true ? (
+          <div className="slide">
+            <div className="col-lg-12" style={{ textAlign: "right" }}>
+              <button
+                className="ml-auto btn"
+                style={{ color: "white" }}
+                onClick={() => this.setState({ slide: false })}
+              >
+                x
+              </button>
+            </div>
 
-          <div className="sTitle">Get latest updates in web technologies </div>
-          <div className="sDesc">
-            I write articles related to web technologies, such as design trends,
-            development tools, UI/UX case studies and reviews, and more. Sign up
-            to my newsletter to get them all.
+            <div className="sTitle">
+              Get latest updates in web technologies{" "}
+            </div>
+            <div className="sDesc">
+              I write articles related to web technologies, such as design
+              trends, development tools, UI/UX case studies and reviews, and
+              more. Sign up to my newsletter to get them all.
+            </div>
+            <div className="mt-4 forme">
+              <input
+                type="text"
+                placeholder="Email"
+                className="form-control col-lg-9 mr-auto email"
+              />
+              <button className="btn btn-warning btnCount">Count me in!</button>
+            </div>
           </div>
-          <div className="mt-4 forme">
-            <input
-              type="text"
-              placeholder="Email"
-              className="form-control col-lg-9 mr-auto email"
-            />
-            <button className="btn btn-warning btnCount">Count me in!</button>
-          </div>
-        </div>
+        ) : null}
       </Fragment>
     );
   }
